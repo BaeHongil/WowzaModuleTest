@@ -56,7 +56,6 @@ public class MyModule extends ModuleBase {
 		VHostUtils utils = new VHostUtils();
 		HTTPRequestAdapter mHTTPRequestAdapter; */
 		stream.getClient();
-		getA
 		
 		stream.addClientListener( myListener );
 		getLogger().info("MyModule onStreamCreate2: " + stream.getName());
