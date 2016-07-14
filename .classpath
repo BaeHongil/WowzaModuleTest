@@ -229,5 +229,6 @@
 			<attribute name="javadoc_location" value="file:/C:/Program Files (x86)/Wowza Media Systems/Wowza Streaming Engine 4.5.0/documentation/serverapi"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gson"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

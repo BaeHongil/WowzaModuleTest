@@ -23,7 +23,6 @@ import com.wowza.wms.websocket.model.WebSocketMessage;
 
 public class WebSocketTest extends HTTProvider2Base {
 
-	private WebSocketTest instance = this;
 	private static final Class<WebSocketTest> CLASS = WebSocketTest.class;
 	private static final String CLASSNAME = "HTTPProviderWebSocket";
 	
@@ -105,7 +104,7 @@ public class WebSocketTest extends HTTProvider2Base {
 		
 		if (!doHTTPAuthentication(vhost, req, resp))
 			return;
-		
+		/*
 		synchronized(lock)
 		{
 			// create timer task on first connection
@@ -114,7 +113,7 @@ public class WebSocketTest extends HTTProvider2Base {
 				this.timer = new Timer();
 				timer.scheduleAtFixedRate(new MyTimerTask(vhost), TIMER_INTERVAL, TIMER_INTERVAL);
 			}
-		}
+		}*/
 		
 		// is this an upgrade request
 		if (req.isUpgradeRequest())

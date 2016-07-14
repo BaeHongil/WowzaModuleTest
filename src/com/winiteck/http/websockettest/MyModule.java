@@ -1,15 +1,20 @@
 package com.winiteck.http.websockettest;
 
+import java.util.Iterator;
+
 import com.wowza.wms.amf.*;
 import com.wowza.wms.application.*;
 import com.wowza.wms.client.*;
 import com.wowza.wms.http.HTTPProviderContext;
 import com.wowza.wms.http.HTTPRequestAdapter;
+import com.wowza.wms.http.IHTTPProvider;
 import com.wowza.wms.module.*;
 import com.wowza.wms.request.*;
 import com.wowza.wms.stream.IMediaStream;
 import com.wowza.wms.stream.IMediaStreamActionNotify3;
 import com.wowza.wms.util.VHostUtils;
+import com.wowza.wms.vhost.HostPort;
+import com.wowza.wms.vhost.HostPortList;
 import com.wowza.wms.vhost.IVHost;
 import com.wowza.wms.vhost.VHostSingleton;
 
@@ -49,14 +54,6 @@ public class MyModule extends ModuleBase {
 	}
 
 	public void onStreamCreate(IMediaStream stream) {
-		/*IVHost vhost = (IVHost)VHostSingleton.getInstance("_defaultVHost_");
-		HTTPProviderContext hp = vhost.getHTTPProviderContext();
-		vhost.getHTTPProviderContext();
-		vhost.getHostPortsList().get(0).getHttpProviders();
-		VHostUtils utils = new VHostUtils();
-		HTTPRequestAdapter mHTTPRequestAdapter; */
-		stream.getClient();
-		
 		stream.addClientListener( myListener );
 		getLogger().info("MyModule onStreamCreate2: " + stream.getName());
 	}
